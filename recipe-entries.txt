@@ -1,0 +1,468 @@
+db.recipes.insertOne(
+    { 
+        _id: 1, name:"Sausage Paella", 
+        vegetarian:"false", 
+        vegan:"false", 
+        favorited:"false", 
+        ingredients:[
+            "sausage", 
+            "bell peppers", 
+            "garlic", 
+            "arborio rice", 
+            "smoked paprika", 
+            "turmeric",
+            "chicken stock",
+            "mayonnaise",
+            "peas",
+            "olive oil",
+            "salt",
+            "black pepper"
+        ]
+    }
+)
+
+db.recipes.insertOne(
+    { 
+        _id: 2, name:"mushroom and balsamic pepper orzo", 
+        vegetarian:"true", 
+        vegan:"false", 
+        favorited:"false", 
+        ingredients:[
+            "orzo",
+            "mushrooms",
+            "bell peppers", 
+            "vegetable stock",
+            "peas",
+            "olive oil",
+            "salt",
+            "black pepper",
+            "cream cheese",
+            "parmesan cheese",
+            "rosemary",
+            "basil",
+            "sage",
+            "balsamic vinegar"      
+        ]
+    }
+)
+
+db.recipes.insertOne(
+    { 
+        _id: 3, name:"chicken with creamy bacon sauce", 
+        vegetarian:"false", 
+        vegan:"false", 
+        favorited:"false", 
+        ingredients:[
+            "chicken",
+            "bacon",
+            "garlic",
+            "string beans",
+            "almonds",
+            "mushrooms",
+            "tomatoes",
+            "vegetable stock",
+            "oregano",
+            "olive oil",
+            "butter"
+        ]
+    }
+)
+
+db.recipes.insertOne(
+    { 
+        _id: 4, name:"Rose Red Lentil Pasta", 
+        vegetarian:"true", 
+        vegan:"false", 
+        favorited:"false", 
+        ingredients:[
+            "red lentil pasta",
+            "tomato paste",
+            "heavy cream",
+            "yellow onion",
+            "garlic",
+            "salt",
+            "olive oil",
+            "red pepper flakes",
+            "spinach",
+            "parmesan cheese"
+        ]
+    }
+)
+
+db.recipes.insertOne(
+    { 
+        _id: 5, name:"Vegan Rose Red Lentil Pasta", 
+        vegetarian:"true", 
+        vegan:"true", 
+        favorited:"false", 
+        ingredients:[
+            "red lentil pasta",
+            "tomato paste",
+            "almond milk",
+            "coconut milk",
+            "yellow onion",
+            "garlic",
+            "salt",
+            "olive oil",
+            "red pepper flakes",
+            "spinach"
+        ]
+    }
+)
+
+db.recipes.insertOne(
+    { 
+        _id: 6, name:"Spicy Ramen with Egg", 
+        vegetarian:"false", 
+        vegan:"false", 
+        favorited:"false", 
+        ingredients:[
+            "ramen",
+            "butter",
+            "garlic",
+            "soy sauce",
+            "brown sugar",
+            "red pepper flakes",
+            "seasame seeds",
+            "scallions",
+            "eggs",
+            "chili oil"
+        ]
+    }
+)
+
+db.recipes.insertOne(
+    { 
+        _id: 7, name:"Vegan Spicy Ramen", 
+        vegetarian:"false", 
+        vegan:"false", 
+        favorited:"false", 
+        ingredients:[
+            "ramen",
+            "olive oil",
+            "garlic",
+            "soy sauce",
+            "brown sugar",
+            "red pepper flakes",
+            "seasame seeds",
+            "scallions",
+            "chili oil",
+            "seasame oil"
+        ]
+    }
+)
+
+db.recipes.insertOne(
+    { 
+        _id: 8, name:"Salmon Bowl", 
+        vegetarian:"false", 
+        vegan:"false", 
+        favorited:"false", 
+        ingredients:[
+            "salmon",
+            "brown rice",
+            "salt",
+            "smoked paprika",
+            "dill",
+            "tomatoes",
+            "cucumber",
+            "lemon",
+            "garlic"
+        ]
+    }
+)
+
+db.recipes.insertOne(
+    { 
+        _id: 9, name:"Roasted Chickpea Bowl", 
+        vegetarian:"true", 
+        vegan:"true", 
+        favorited:"false", 
+        ingredients:[
+            "chickpeas",
+            "brown rice",
+            "salt",
+            "smoked paprika",
+            "harissa",
+            "tomatoes",
+            "cucumber",
+            "lemon",
+            "olive oil"
+        ]
+    }
+)
+
+db.recipes.insertOne(
+    { 
+        _id: 10, name:"Chicken Taco Bowl", 
+        vegetarian:"false", 
+        vegan:"false", 
+        favorited:"false", 
+        ingredients:[
+            "chicken",
+            "tomatoes",
+            "yellow onion",
+            "lime",
+            "cilantro",
+            "avocado",
+            "garlic",
+            "salt",
+            "black pepper",
+            "cauliflower",
+            "taco seasoning",
+            "bell peppers"
+        ]
+    }
+)
+
+db.recipes.insertOne(
+    { 
+        _id: 11, name:"Vegan Taco Bowl", 
+        vegetarian:"true", 
+        vegan:"true", 
+        favorited:"false", 
+        ingredients:[
+            "tomatoes",
+            "yellow onion",
+            "lime",
+            "cilantro",
+            "avocado",
+            "garlic",
+            "salt",
+            "black pepper",
+            "cauliflower",
+            "taco seasoning",
+            "bell peppers"
+        ]
+    }
+)
+
+db.recipes.insertOne(
+    { 
+        _id: 12, name:"Steak and Sweet Potato Fries", 
+        vegetarian:"false", 
+        vegan:"false", 
+        favorited:"false", 
+        ingredients:[
+            "sirloin",
+            "sweet potatoes",
+            "salt",
+            "black pepper",
+            "olive oil",
+            "honey"
+        ]
+    }
+)
+
+db.recipes.insertOne(
+    { 
+        _id: 13, name:"Spinach Arugula Avocado Salad", 
+        vegetarian:"true", 
+        vegan:"true", 
+        favorited:"false", 
+        ingredients:[
+            "spinach",
+            "tomatoes",
+            "cucumber",
+            "avocado",
+            "arugula",
+            "lemon",
+            "salt",
+            "black pepper",
+            "olive oil",
+            "white wine vinegar"
+        ]
+    }
+)
+
+db.recipes.insertOne(
+    { 
+        _id: 14, name:"Strawberry Apple Salad", 
+        vegetarian:"true", 
+        vegan:"true", 
+        favorited:"false", 
+        ingredients:[
+            "spinach",
+            "strawberries",
+            "apple",
+            "arugula",
+            "lemon",
+            "salt",
+            "black pepper",
+            "olive oil",
+            "white wine vinegar"
+        ]
+    }
+)
+
+db.recipes.insertOne(
+    { 
+        _id: 15, name:"Tuscan Herbed Chicken Linguine", 
+        vegetarian:"false", 
+        vegan:"false", 
+        favorited:"false", 
+        ingredients:[
+            "tomatoes",
+            "garlic",
+            "lemon",
+            "chicken",
+            "linguine pasta",
+            "cream cheese",
+            "parmesan cheese",
+            "butter",
+            "salt",
+            "black pepper",
+            "olive oil",
+            "basil",
+            "rosemary",
+            "oregano",
+            "garlic powder",
+            "cayenne pepper"
+        ]
+    }
+)
+
+db.recipes.insertOne(
+    { 
+        _id: 16, name:"Chickpea and Apricot Tagine", 
+        vegetarian:"true", 
+        vegan:"false", 
+        favorited:"false", 
+        ingredients:[
+            "couscous",
+            "chickpeas",
+            "lemon",
+            "zucchini",
+            "vegetable stock",
+            "apricot",
+            "yellow onion",
+            "garlic",
+            "sour cream",
+            "cilantro",
+            "salt",
+            "black pepper",
+            "olive oil",
+            "smoked paprika",
+            "turmeric",
+            "garlic powder",
+            "cayenne pepper",
+            "cinnamon",
+            "chili powder"
+        ]
+    }
+)
+
+db.recipes.insertOne(
+    { 
+        _id: 17, name:"Vegan Chickpea and Apricot Tagine", 
+        vegetarian:"false", 
+        vegan:"false", 
+        favorited:"false", 
+        ingredients:[
+            "couscous",
+            "chickpeas",
+            "lemon",
+            "zucchini",
+            "vegetable stock",
+            "apricot",
+            "yellow onion",
+            "garlic",
+            "cilantro",
+            "salt",
+            "black pepper",
+            "olive oil",
+            "smoked paprika",
+            "turmeric",
+            "garlic powder",
+            "cayenne pepper",
+            "cinnamon",
+            "chili powder"
+        ]
+    }
+)
+
+db.recipes.insertOne(
+    { 
+        _id: 18, name:"Meatless Southwest Quesadillas", 
+        vegetarian:"true", 
+        vegan:"false", 
+        favorited:"false", 
+        ingredients:[
+            "flour tortillas",
+            "pepper jack cheese",
+            "cheddar cheese",
+            "monterey jack cheese",
+            "asadero cheese"
+            "poblano peppers",
+            "red onion",
+            "tomatoes",
+            "sour cream",
+            "lime",
+            "salt",
+            "black pepper",
+            "olive oil",
+            "chili powder",
+            "smoked paprika",
+            "oregano",
+            "garlic powder",
+            "turmeric",
+            "cayenne pepper"
+        ]
+    }
+)
+
+db.recipes.insertOne(
+    { 
+        _id: 19, name:"Beef Quesadillas", 
+        vegetarian:"false", 
+        vegan:"false", 
+        favorited:"false", 
+        ingredients:[
+            "flour tortillas",
+            "ground beef",
+            "pepper jack cheese",
+            "cheddar cheese",
+            "monterey jack cheese",
+            "asadero cheese"
+            "poblano peppers",
+            "red onion",
+            "tomatoes",
+            "sour cream",
+            "lime",
+            "salt",
+            "black pepper",
+            "olive oil",
+            "chili powder",
+            "smoked paprika",
+            "oregano",
+            "garlic powder",
+            "turmeric",
+            "cayenne pepper"
+        ]
+    }
+)
+
+db.recipes.insertOne(
+    { 
+        _id: 20, name:"Apple Sage Turkey Burger", 
+        vegetarian:"false", 
+        vegan:"false", 
+        favorited:"false", 
+        ingredients:[
+            "turkey",
+            "breadcrumbs",
+            "sage",
+            "garlic",
+            "apple",
+            "salt",
+            "black pepper",
+            "olive oil",
+            "potato buns",
+            "lemon",
+            "mayonnaise",
+            "arugula",
+            "vegetable oil"
+        ]
+    }
+)
+
