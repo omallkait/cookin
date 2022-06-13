@@ -1,113 +1,120 @@
-db.ingredients.insertMany( [
-{ id: 1, name:"chicken", category:"meat"},
-{ id: 2, name:"ground beef", category:"meat"},
-{ id: 3, name:"sirloin", category:"meat"},
-{ id: 4, name:"bacon", category:"meat"},
-{ id: 5, name:"salmon", category:"meat"},
-{ id: 6, name:"shrimp", category:"meat"},
-{ id: 7, name:"eggs", category:"meat"},
-{ id: 8, name:"turkey", category:"meat"},
-{ id: 9, name:"sausage", category:"meat"},
-{ id: 10, name:"butter", category:"dairy & eggs"},
-{ id: 11, name:"milk", category:"dairy & eggs"},
-{ id: 12, name:"heavy cream", category:"dairy & eggs"},
-{ id: 13, name:"half & half", category:"dairy & eggs"},
-{ id: 14, name:"parmesan cheese", category:"dairy & eggs"},
-{ id: 15, name:"almond milk", category:"beverage"},
-{ id: 16, name:"oat milk", category:"beverage"},
-{ id: 17, name:"yogurt", category:"dairy & eggs"},
-{ id: 18, name:"spinach", category:"produce"},
-{ id: 19, name:"tomatoes", category:"produce"},
-{ id: 20, name:"cucumber", category:"produce"},
-{ id: 21, name:"bell peppers", category:"produce"},
-{ id: 22, name:"yellow onion", category:"produce"},
-{ id: 23, name:"red onion", category:"produce"},
-{ id: 24, name:"lemon", category:"produce"},
-{ id: 25, name:"lime", category:"produce"},
-{ id: 26, name:"banana", category:"produce"},
-{ id: 27, name:"mango", category:"produce"},
-{ id: 28, name:"strawberries", category:"produce"},
-{ id: 29, name:"blueberries", category:"produce"},
-{ id: 30, name:"avocado", category:"produce"},
-{ id: 31, name:"pineapple", category:"produce"},
-{ id: 32, name:"kiwi", category:"produce"},
-{ id: 33, name:"mushrooms", category:"produce"},
-{ id: 34, name:"garlic", category:"produce"},
-{ id: 35, name:"arugula", category:"produce"},
-{ id: 36, name:"ginger", category:"produce"},
-{ id: 37, name:"scallions", category:"produce"},
-{ id: 38, name:"brussels sprouts", category:"produce"},
-{ id: 39, name:"broccoli", category:"produce"},
-{ id: 40, name:"cauliflower", category:"produce"},
-{ id: 41, name:"apple", category:"produce"},
-{ id: 42, name:"kale", category:"produce"},
-{ id: 43, name:"peas", category:"produce"},
-{ id: 44, name:"cilantro", category:"produce"},
-{ id: 45, name:"sweet potatoes", category:"produce"},
-{ id: 46, name:"yellow potatoes", category:"produce"},
-{ id: 47, name:"carrots", category:"produce"},
-{ id: 48, name:"ramen", category:"pantry"},
-{ id: 49, name:"whole wheat pasta", category:"pantry"},
-{ id: 50, name:"brown rice", category:"pantry"},
-{ id: 51, name:"jasmine rice", category:"pantry"},
-{ id: 52, name:"arborio rice", category:"pantry"},
-{ id: 53, name:"quinoa", category:"pantry"},
-{ id: 54, name:"couscous", category:"pantry"},
-{ id: 55, name:"red lentil pasta", category:"pantry"},
-{ id: 56, name:"tomato paste", category:"pantry"},
-{ id: 57, name:"chickpeas", category:"pantry"},
-{ id: 58, name:"brown sugar", category:"pantry"},
-{ id: 59, name:"breadcrumbs", category:"pantry"},
-{ id: 60, name:"salt", category:"oils and spices"},
-{ id: 61, name:"black pepper", category:"oils and spices"},
-{ id: 62, name:"avocado oil", category:"oils and spices"},
-{ id: 63, name:"smoked paprika", category:"oils and spices"},
-{ id: 64, name:"tumeric", category:"oils and spices"},
-{ id: 65, name:"garlic powder", category:"oils and spices"},
-{ id: 66, name:"cumin", category:"oils and spices"},
-{ id: 67, name:"white wine vinegar", category:"oils and spices"},
-{ id: 68, name:"balsamic vinegar", category:"oils and spices"},
-{ id: 69, name:"oregano", category:"oils and spices"},
-{ id: 70, name:"chili oil", category:"oils and spices"},
-{ id: 71, name:"red pepper flakes", category:"oils and spices"},
-{ id: 72, name:"soy sauce", category:"oils and spices"},
-{ id: 73, name:"seasame oil", category:"oils and spices"},
-{ id: 74, name:"seasame seeds", category:"oils and spices"},
-{ id: 75, name:"shawarma", category:"oils and spices"},
-{ id: 76, name:"harissa", category:"oils and spices"},
-{ id: 77, name:"chicken stock", category:"oils and spices"},
-{ id: 78, name:"olive oil", category:"oils and spices"},
-{ id: 79, name:"sriracha", category:"oils and spices"},
-{ id: 80, name:"honey", category:"oils and spices"},
-{ id: 81, name:"zucchini", category:"produce"},
-{ id: 82, name:"linguine pasta", category:"pantry"},
-{ id: 83, name:"sour cream", category:"dairy & eggs"},
-{ id: 84, name:"cream cheese", category:"dairy & eggs"},
-{ id: 85, name:"parsley", category:"oils and spices"},
-{ id: 86, name:"thyme", category:"oils and spices"},
-{ id: 87, name:"basil", category:"oils and spices"},
-{ id: 88, name:"rosemary", category:"oils and spices"},
-{ id: 89, name:"flour tortillas", category:"pantry"},
-{ id: 90, name:"corn tortillas", category:"pantry"},
-{ id: 91, name:"pepper jack cheese", category:"dairy & eggs"},
-{ id: 92, name:"cheddar cheese", category:"dairy & eggs"},
-{ id: 93, name:"monterey jack cheese", category:"dairy & eggs"},
-{ id: 94, name:"poblano peppers", category:"produce"},
-{ id: 95, name:"southwest spice", category:"oils and spices"},
-{ id: 96, name:"ground pork", category:"meat"},
-{ id: 97, name:"asadero cheese", category:"dairy & eggs"},
-{ id: 98, name:"potato buns", category:"pantry"},
-{ id: 99, name:"mayonnaise", category:"dairy & eggs"},
-{ id: 100, name:"peanut butter", category:"pantry"},
-{ id: 101, name:"coconut milk", category:"beverage"},
-{ id: 102, name:"basmati rice", category:"pantry"},
-{ id: 103, name:"bok choy", category:"produce"},
-{ id: 104, name:"tofu", category:"produce"},
-{ id: 105, name:"cornstarch", category:"pantry"},
-{ id: 106, name:"string beans", category:"produce"},
-{ id: 107, name:"cayenne pepper", category:"oils and spices"},
-{ id: 108, name:"vegetable oil", category:"oils and spices"},
-{ id: 109, name:"red wine vinegar", category:"oils and spices"},
-{ id: 110, name:"white sugar", category:"pantry"},
-{ id: 111, name:"chili powder", category:"oils and spices"},
-] );
+db.ingredients.insertOne({ _id: 1, name:"chicken", category:"meat"})
+db.ingredients.insertOne({ _id: 2, name:"ground beef", category:"meat"})
+db.ingredients.insertOne({ _id: 3, name:"sirloin", category:"meat"})
+db.ingredients.insertOne({ _id: 4, name:"bacon", category:"meat"})
+db.ingredients.insertOne({ _id: 5, name:"salmon", category:"meat"})
+db.ingredients.insertOne({ _id: 6, name:"shrimp", category:"meat"})
+db.ingredients.insertOne({ _id: 7, name:"eggs", category:"meat"})
+db.ingredients.insertOne({ _id: 8, name:"turkey", category:"meat"})
+db.ingredients.insertOne({ _id: 9, name:"sausage", category:"meat"})
+db.ingredients.insertOne({ _id: 10, name:"butter", category:"dairy & eggs"})
+db.ingredients.insertOne({ _id: 11, name:"milk", category:"dairy & eggs"})
+db.ingredients.insertOne({ _id: 12, name:"heavy cream", category:"dairy & eggs"})
+db.ingredients.insertOne({ _id: 13, name:"half & half", category:"dairy & eggs"})
+db.ingredients.insertOne({ _id: 14, name:"parmesan cheese", category:"dairy & eggs"})
+db.ingredients.insertOne({ _id: 15, name:"almond milk", category:"beverage"})
+db.ingredients.insertOne({ _id: 16, name:"oat milk", category:"beverage"})
+db.ingredients.insertOne({ _id: 17, name:"yogurt", category:"dairy & eggs"})
+db.ingredients.insertOne({ _id: 18, name:"spinach", category:"produce"})
+db.ingredients.insertOne({ _id: 19, name:"tomatoes", category:"produce"})
+db.ingredients.insertOne({ _id: 20, name:"cucumber", category:"produce"})
+db.ingredients.insertOne({ _id: 21, name:"bell peppers", category:"produce"})
+db.ingredients.insertOne({ _id: 22, name:"yellow onion", category:"produce"})
+db.ingredients.insertOne({ _id: 23, name:"red onion", category:"produce"})
+db.ingredients.insertOne({ _id: 24, name:"lemon", category:"produce"})
+db.ingredients.insertOne({ _id: 25, name:"lime", category:"produce"})
+db.ingredients.insertOne({ _id: 26, name:"banana", category:"produce"})
+db.ingredients.insertOne({ _id: 27, name:"mango", category:"produce"})
+db.ingredients.insertOne({ _id: 28, name:"strawberries", category:"produce"})
+db.ingredients.insertOne({ _id: 29, name:"blueberries", category:"produce"})
+db.ingredients.insertOne({ _id: 30, name:"avocado", category:"produce"})
+db.ingredients.insertOne({ _id: 31, name:"pineapple", category:"produce"})
+db.ingredients.insertOne({ _id: 32, name:"kiwi", category:"produce"})
+db.ingredients.insertOne({ _id: 33, name:"mushrooms", category:"produce"})
+db.ingredients.insertOne({ _id: 34, name:"garlic", category:"produce"})
+db.ingredients.insertOne({ _id: 35, name:"arugula", category:"produce"})
+db.ingredients.insertOne({ _id: 36, name:"ginger", category:"produce"})
+db.ingredients.insertOne({ _id: 37, name:"scallions", category:"produce"})
+db.ingredients.insertOne({ _id: 38, name:"brussels sprouts", category:"produce"})
+db.ingredients.insertOne({ _id: 39, name:"broccoli", category:"produce"})
+db.ingredients.insertOne({ _id: 40, name:"cauliflower", category:"produce"})
+db.ingredients.insertOne({ _id: 41, name:"apple", category:"produce"})
+db.ingredients.insertOne({ _id: 42, name:"kale", category:"produce"})
+db.ingredients.insertOne({ _id: 43, name:"peas", category:"produce"})
+db.ingredients.insertOne({ _id: 44, name:"cilantro", category:"produce"})
+db.ingredients.insertOne({ _id: 45, name:"sweet potatoes", category:"produce"})
+db.ingredients.insertOne({ _id: 46, name:"yellow potatoes", category:"produce"})
+db.ingredients.insertOne({ _id: 47, name:"carrots", category:"produce"})
+db.ingredients.insertOne({ _id: 48, name:"ramen", category:"pantry"})
+db.ingredients.insertOne({ _id: 49, name:"whole wheat pasta", category:"pantry"})
+db.ingredients.insertOne({ _id: 50, name:"brown rice", category:"pantry"})
+db.ingredients.insertOne({ _id: 51, name:"jasmine rice", category:"pantry"})
+db.ingredients.insertOne({ _id: 52, name:"arborio rice", category:"pantry"})
+db.ingredients.insertOne({ _id: 53, name:"quinoa", category:"pantry"})
+db.ingredients.insertOne({ _id: 54, name:"couscous", category:"pantry"})
+db.ingredients.insertOne({ _id: 55, name:"red lentil pasta", category:"pantry"})
+db.ingredients.insertOne({ _id: 56, name:"tomato paste", category:"pantry"})
+db.ingredients.insertOne({ _id: 57, name:"chickpeas", category:"pantry"})
+db.ingredients.insertOne({ _id: 58, name:"brown sugar", category:"pantry"})
+db.ingredients.insertOne({ _id: 59, name:"breadcrumbs", category:"pantry"})
+db.ingredients.insertOne({ _id: 60, name:"salt", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 61, name:"black pepper", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 62, name:"avocado oil", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 63, name:"smoked paprika", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 64, name:"turmeric", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 65, name:"garlic powder", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 66, name:"cumin", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 67, name:"white wine vinegar", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 68, name:"balsamic vinegar", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 69, name:"oregano", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 70, name:"chili oil", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 71, name:"red pepper flakes", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 72, name:"soy sauce", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 73, name:"seasame oil", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 74, name:"seasame seeds", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 75, name:"shawarma", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 76, name:"harissa", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 77, name:"chicken stock", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 78, name:"olive oil", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 79, name:"sriracha", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 80, name:"honey", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 81, name:"zucchini", category:"produce"})
+db.ingredients.insertOne({ _id: 82, name:"linguine pasta", category:"pantry"})
+db.ingredients.insertOne({ _id: 83, name:"sour cream", category:"dairy & eggs"})
+db.ingredients.insertOne({ _id: 84, name:"cream cheese", category:"dairy & eggs"})
+db.ingredients.insertOne({ _id: 85, name:"parsley", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 86, name:"thyme", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 87, name:"basil", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 88, name:"rosemary", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 89, name:"flour tortillas", category:"pantry"})
+db.ingredients.insertOne({ _id: 90, name:"corn tortillas", category:"pantry"})
+db.ingredients.insertOne({ _id: 91, name:"pepper jack cheese", category:"dairy & eggs"})
+db.ingredients.insertOne({ _id: 92, name:"cheddar cheese", category:"dairy & eggs"})
+db.ingredients.insertOne({ _id: 93, name:"monterey jack cheese", category:"dairy & eggs"})
+db.ingredients.insertOne({ _id: 94, name:"poblano peppers", category:"produce"})
+db.ingredients.insertOne({ _id: 95, name:"southwest spice", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 96, name:"ground pork", category:"meat"})
+db.ingredients.insertOne({ _id: 97, name:"asadero cheese", category:"dairy & eggs"})
+db.ingredients.insertOne({ _id: 98, name:"potato buns", category:"pantry"})
+db.ingredients.insertOne({ _id: 99, name:"mayonnaise", category:"dairy & eggs"})
+db.ingredients.insertOne({ _id: 100, name:"peanut butter", category:"pantry"})
+db.ingredients.insertOne({ _id: 101, name:"coconut milk", category:"beverage"})
+db.ingredients.insertOne({ _id: 102, name:"basmati rice", category:"pantry"})
+db.ingredients.insertOne({ _id: 103, name:"bok choy", category:"produce"})
+db.ingredients.insertOne({ _id: 104, name:"tofu", category:"produce"})
+db.ingredients.insertOne({ _id: 105, name:"cornstarch", category:"pantry"})
+db.ingredients.insertOne({ _id: 106, name:"string beans", category:"produce"})
+db.ingredients.insertOne({ _id: 107, name:"cayenne pepper", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 108, name:"vegetable oil", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 109, name:"red wine vinegar", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 110, name:"white sugar", category:"pantry"})
+db.ingredients.insertOne({ _id: 111, name:"chili powder", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 112, name:"vegetable stock", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 113, name:"orzo", category:"pantry"})
+db.ingredients.insertOne({ _id: 114, name:"sage", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 115, name:"almonds", category:"pantry"})
+db.ingredients.insertOne({ _id: 116, name:"dill", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 117, name:"taco seasoning", category:"oils and spices"})
+db.ingredients.insertOne({ _id: 118, name:"apricot", category:"produce"})
+db.ingredients.insertOne({ _id: 119, name:"cinnamon", category:"oils and spices"})
+
