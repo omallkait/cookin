@@ -13,10 +13,6 @@
         initController();
 
         function initController() {
-            // get current user
-            UserService.GetCurrent().then(function (user) {
-                vm.user = user;
-            });
         }
     }
 

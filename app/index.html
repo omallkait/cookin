@@ -10,7 +10,6 @@
     <header>
         <ul class="nav nav-tabs">
             <li ng-class="{active: activeTab === 'home'}"><a ui-sref="home">Home</a></li>
-            <li><a href="/login" target="_self">Logout</a></li>
         </ul>
         <div class="flash-message" ng-if="flash">
             <div class="{{'alert alert-' + flash.type}}" ng-bind="flash.message"></div>
@@ -30,7 +29,6 @@
 
     <!-- application scripts -->
     <script src="app.js"></script>
-    <script src="app-services/userService.js"></script>
     <script src="app-services/recipeService.js"></script>
     <script src="app-services/flashService.js"></script>
     <script src="home/indexController.js"></script>
