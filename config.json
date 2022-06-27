@@ -1,0 +1,5 @@
+﻿{
+    "connectionString": "mongodb+srv://kaitomall:1oOiGRR41kPSYWxu@cluster0.irxe4.mongodb.net/cookinDB",
+    "apiUrl": "http://localhost:3000/api",
+    "secret": "jvlOYsCqjcrUOhMupm8AOmYXDHjA9n5NSLurBoE3oNRmoceQs5uA9AAnhWbZ9Au"
+}
