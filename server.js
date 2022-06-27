@@ -1,26 +1,36 @@
 ﻿require('rootpath')();
 var express = require('express');
 var app = express();
-var session = require('express-session');
 var bodyParser = require('body-parser');
-var expressJwt = require('express-jwt');
 var config = require('config.json');
-var mongo = require('mongoskin');
 var mongoose = require('mongoose');
 
-var db = mongoose.connect(config.localConnectionString)
+var db = mongoose.connect(config.connectionString)
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(session({ secret: config.secret, resave: false, saveUninitialized: true }));
+
+const recipeSchema = {
+    name : String,
+    vegetarian: String,
+    vegan: String,
+    favorited: String,
+    ingredients: Array
+}
+
+const Recipe = mongoose.model("Recipe", recipeSchema);
 
 // routes
 app.use('/app', require('./controllers/appController'));
 
 // make '/app' default route
 app.get('/', function (req, res) {
-    return res.redirect('/app');
+    Recipe.find({}, function(err, recipes){
+        res.render('index', {
+            recipeList: recipes
+        })
+    })
 });
 
 // start server

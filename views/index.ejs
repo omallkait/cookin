@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <h1>Recipes</h1>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <style type="text/css">
+        body {
+            padding-top: 100px;
+        }
+
+        .form-container {
+            width: 400px;
+            margin: auto;
+        }
+
+        .creatorInformation {
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <%recipeList.forEach(recipe => {%>
+        <p><%= recipe.name %></p>
+        <p>vegetarian: <%= recipe.vegetarian %></p>
+        <p>vegan: <%= recipe.vegan %></p>
+        <p>favorited: <%= recipe.favorited %></p>
+        <p>ingredients: <%= recipe.ingredients %></p>
+        <p>-----------------------------------------</p>
+        <p></p>
+    <%})%>
+</body>
+</html>
