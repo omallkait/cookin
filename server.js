@@ -20,6 +20,7 @@ const recipeSchema = {
 }
 
 const Recipe = mongoose.model("Recipe", recipeSchema);
+const Vegan = mongoose.model("Vegan", recipeSchema);
 
 // routes
 app.use('/app', require('./controllers/appController'));
