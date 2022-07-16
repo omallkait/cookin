@@ -52,6 +52,15 @@ app.get('/vegetarian', function (req, res) {
     })
 });
 
+//only show recipes that are favorites
+app.get('/favorites', function (req, res) {
+    Recipe.find( { favorited: "true" }, function(err, recipes){
+        res.render('favorites', {
+            recipeList: recipes
+        })
+    })
+});
+
 // start server
 var server = app.listen(3000, function () {
     console.log('Server listening at http://' + server.address().address + ':' + server.address().port);

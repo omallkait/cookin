@@ -22,18 +22,7 @@
     </style>
 </head>
 <body>
-    <button type="button">All Recipes</button>
-    <button type="button">Vegan Recipes</button>
-    <button type="button">Vegetarian Recipes</button>
-
-    <%recipeList.forEach(recipe => {%>
-        <p><%= recipe.name %></p>
-        <p>vegetarian: <%= recipe.vegetarian %></p>
-        <p>vegan: <%= recipe.vegan %></p>
-        <p>favorited: <%= recipe.favorited %></p>
-        <p>ingredients: <%= recipe.ingredients %></p>
-        <p>-----------------------------------------</p>
-        <p></p>
-    <%})%>
+    <%- include('partials/nav') %>
+    <%- include('partials/recipeContent') %>
 </body>
 </html>
