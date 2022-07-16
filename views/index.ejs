@@ -22,9 +22,9 @@
     </style>
 </head>
 <body>
-    <button type="button">All Recipes</button>
-    <button type="button">Vegan Recipes</button>
-    <button type="button">Vegetarian Recipes</button>
+    <a href="/">All Recipes / </a>
+    <a href="/vegetarian">Vegetarian Recipes / </a>
+    <a href="/vegan">Vegan Recipes</a>
 
     <%recipeList.forEach(recipe => {%>
         <p><%= recipe.name %></p>
