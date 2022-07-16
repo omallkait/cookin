@@ -43,6 +43,15 @@ app.get('/vegan', function (req, res) {
     })
 });
 
+//only show recipes that are vegetarian
+app.get('/vegetarian', function (req, res) {
+    Recipe.find( { vegetarian: "true" }, function(err, recipes){
+        res.render('vegetarian', {
+            recipeList: recipes
+        })
+    })
+});
+
 // start server
 var server = app.listen(3000, function () {
     console.log('Server listening at http://' + server.address().address + ':' + server.address().port);
