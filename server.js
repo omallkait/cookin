@@ -20,7 +20,7 @@ const recipeSchema = {
 }
 
 const Recipe = mongoose.model("Recipe", recipeSchema);
-const Vegan = mongoose.model("Vegan", recipeSchema);
+
 
 // routes
 app.use('/app', require('./controllers/appController'));
@@ -29,6 +29,15 @@ app.use('/app', require('./controllers/appController'));
 app.get('/', function (req, res) {
     Recipe.find({}, function(err, recipes){
         res.render('index', {
+            recipeList: recipes
+        })
+    })
+});
+
+//only show recipes that are vegan
+app.get('/vegan', function (req, res) {
+    Recipe.find( { vegan: "true" }, function(err, recipes){
+        res.render('vegan', {
             recipeList: recipes
         })
     })
