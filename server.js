@@ -21,6 +21,16 @@ const recipeSchema = {
 
 const Recipe = mongoose.model("Recipe", recipeSchema);
 
+const ingredientSchema = {
+    name: String,
+    stocked: String,
+    category: String,
+    quantity_stocked: Number,
+    units: String
+}
+
+const Ingredient = mongoose.model("Ingredient", ingredientSchema);
+
 
 // routes
 app.use('/app', require('./controllers/appController'));
@@ -57,6 +67,15 @@ app.get('/favorites', function (req, res) {
     Recipe.find( { favorited: "true" }, function(err, recipes){
         res.render('favorites', {
             recipeList: recipes
+        })
+    })
+});
+
+//only items in stock
+app.get('/stock', function (req, res) {
+    Ingredient.find( { stocked: "true"}, function(err, ingredients){
+        res.render('stock', {
+            ingredientList: ingredients
         })
     })
 });
