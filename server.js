@@ -26,7 +26,9 @@ const ingredientSchema = {
     stocked: String,
     category: String,
     quantity_stocked: Number,
-    units: String
+    units: String,
+    needed: String,
+    quantity_needed: Number
 }
 
 const Ingredient = mongoose.model("Ingredient", ingredientSchema);
@@ -46,7 +48,7 @@ app.get('/', function (req, res) {
 
 //only show recipes that are vegan
 app.get('/vegan', function (req, res) {
-    Recipe.find( { vegan: "true" }, function(err, recipes){
+    Recipe.find( { vegan: "TRUE" }, function(err, recipes){
         res.render('vegan', {
             recipeList: recipes
         })
@@ -55,7 +57,7 @@ app.get('/vegan', function (req, res) {
 
 //only show recipes that are vegetarian
 app.get('/vegetarian', function (req, res) {
-    Recipe.find( { vegetarian: "true" }, function(err, recipes){
+    Recipe.find( { vegetarian: "TRUE" }, function(err, recipes){
         res.render('vegetarian', {
             recipeList: recipes
         })
@@ -64,7 +66,7 @@ app.get('/vegetarian', function (req, res) {
 
 //only show recipes that are favorites
 app.get('/favorites', function (req, res) {
-    Recipe.find( { favorited: "true" }, function(err, recipes){
+    Recipe.find( { favorited: "TRUE" }, function(err, recipes){
         res.render('favorites', {
             recipeList: recipes
         })
@@ -73,8 +75,17 @@ app.get('/favorites', function (req, res) {
 
 //only items in stock
 app.get('/stock', function (req, res) {
-    Ingredient.find( { stocked: "true"}, function(err, ingredients){
+    Ingredient.find( { stocked: "TRUE"}, function(err, ingredients){
         res.render('stock', {
+            ingredientList: ingredients
+        })
+    })
+});
+
+//only items on the grocery list
+app.get('/grocerylist', function (req, res) {
+    Ingredient.find( { needed: "TRUE"}, function(err, ingredients){
+        res.render('grocerylist', {
             ingredientList: ingredients
         })
     })
