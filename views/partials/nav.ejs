@@ -1,6 +1,25 @@
 <a href="/stock">Stock / </a>
 <a href="/grocerylist">Grocery List / </a>
 <a href="/">All Recipes / </a>
+<a href="/recommendations">Recommended Recipes / </a>
 <a href="/favorites">Favorites / </a>
 <a href="/vegetarian">Vegetarian Recipes / </a>
 <a href="/vegan">Vegan Recipes</a>
+<p></p>
+<p></p>
+<form id="myform" data-form-type="Registration form" action="/search">
+    <input type="text" name="ingredientSearch" placeholder="What Ingredient?">
+    
+    <button type="submit" onclick="showFilteredResults();">Search</button>
+  </form>
+  <br/>
+  
+  <script>
+    let showFilteredResults = () => {
+      let element = document.getElementById("myform");
+      alert("Ingredient = " + element.nodeValue);
+
+      
+    }
+  </script>
+

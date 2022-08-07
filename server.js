@@ -13,10 +13,12 @@ app.use(bodyParser.json());
 
 const recipeSchema = {
     name : String,
+    percent_stocked: Number,
     vegetarian: String,
     vegan: String,
     favorited: String,
-    ingredients: Array
+    ingredients: Array,
+    instructions: String
 }
 
 const Recipe = mongoose.model("Recipe", recipeSchema);
@@ -44,6 +46,15 @@ app.get('/', function (req, res) {
             recipeList: recipes
         })
     })
+});
+
+//All recipes, but sorted by percentage in stock
+app.get('/recommendations', function (req, res) {
+    Recipe.find({percent_stocked: {$gte:40}}, function(err, recipes){
+        res.render('recommendations', {
+            recipeList: recipes
+        })
+    }).sort( { percent_stocked : -1} )
 });
 
 //only show recipes that are vegan
@@ -89,6 +100,20 @@ app.get('/grocerylist', function (req, res) {
             ingredientList: ingredients
         })
     })
+});
+
+//only recipes that include a given ingredient
+app.get('/search', function (req, res) {
+    Recipe.find( { }, function(err, recipes){
+        res.render('search', {
+            recipeList: recipes
+        })
+    })
+});
+
+//for now, just / 
+app.post('/allrecipes', function(req, res){
+    return res.redirect('/search');
 });
 
 // start server

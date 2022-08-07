@@ -1,9 +1,11 @@
 <%recipeList.forEach(recipe => {%>
     <p><%= recipe.name %></p>
+    <p>percentage of ingredients in stock: <%= recipe.percent_stocked %>%</p>
     <p>vegetarian: <%= recipe.vegetarian %></p>
     <p>vegan: <%= recipe.vegan %></p>
     <p>favorited: <%= recipe.favorited %></p>
     <p>ingredients: <%= recipe.ingredients %></p>
+    <p>instructions: <%= recipe.instructions %></p>
     <p>-----------------------------------------</p>
     <p></p>
 <%})%>
