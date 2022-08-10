@@ -10,16 +10,17 @@
 <form id="myform" data-form-type="Registration form" action="/search">
     <input type="text" name="ingredientSearch" placeholder="What Ingredient?">
     
-    <button type="submit" onclick="showFilteredResults();">Search</button>
+    <button type="submit" onclick="setFilteredResults();">Search</button>
   </form>
   <br/>
   
   <script>
-    let showFilteredResults = () => {
+    let setFilteredResults = () => {
       let element = document.getElementById("myform");
-      alert("Ingredient = " + element.nodeValue);
+      let searchedIngredient = element.ingredientSearch.value;
 
-      
-    }
+      res.json(searchedIngredient);
+    };   
+    
   </script>
 

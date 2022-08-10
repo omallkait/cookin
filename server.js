@@ -4,6 +4,8 @@ var app = express();
 var bodyParser = require('body-parser');
 var config = require('config.json');
 var mongoose = require('mongoose');
+var searchedIngredient = "";
+
 
 var db = mongoose.connect(config.connectionString)
 app.set('view engine', 'ejs');
@@ -34,7 +36,6 @@ const ingredientSchema = {
 }
 
 const Ingredient = mongoose.model("Ingredient", ingredientSchema);
-
 
 // routes
 app.use('/app', require('./controllers/appController'));
@@ -104,10 +105,24 @@ app.get('/grocerylist', function (req, res) {
 
 //only recipes that include a given ingredient
 app.get('/search', function (req, res) {
-    Recipe.find( { }, function(err, recipes){
-        res.render('search', {
-            recipeList: recipes
-        })
+    //ingredient needs quotes to be an example match,
+    //otherwise "chicken" could return recipes with "chicken stock"
+    const ingredient = "\"" + req.query.ingredientSearch + "\"";
+    Recipe.find( { "ingredients": { $regex: ingredient } }, function(err, recipes){
+        console.log("ingredient selected: " + req.query.ingredientSearch);
+    
+
+        //If no recipes are found, tell the user
+        if (!recipes.length) {
+            console.log("Ingredient not found!");
+            res.json("Error: Ingredient Not Found! Please Navigate Back to localhost:3000");
+        }
+
+        else{
+            res.render('search', {
+                recipeList: recipes
+            })
+        }
     })
 });
 
